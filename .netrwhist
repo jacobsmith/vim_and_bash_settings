@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/users/jacobsmith/Ruby/hartl_tutorial/sample_app/config'
+let g:netrw_dirhist_2='/users/jacobsmith/Ruby/hartl_tutorial/sample_app/app/views/layouts'
+let g:netrw_dirhist_3='/users/jacobsmith/Ruby/hartl_tutorial/sample_app/app/views'
+let g:netrw_dirhist_4='/users/jacobsmith/Ruby/hartl_tutorial/sample_app/app/views/static_pages'
+let g:netrw_dirhist_5='/users/jacobsmith/Ruby/hartl_tutorial/demo_app'
+let g:netrw_dirhist_6='/users/jacobsmith/Ruby/hartl_tutorial/demo_app/app'
+let g:netrw_dirhist_7='/users/jacobsmith/Ruby/hartl_tutorial/demo_app/app/helpers'
