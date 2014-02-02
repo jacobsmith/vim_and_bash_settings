@@ -1,0 +1,83 @@
+set nocompatible
+syntax on
+filetype on
+filetype indent on
+
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set number
+set incsearch
+set smartindent
+set autoindent
+
+" Allow _ as word delimiter
+set iskeyword-=_
+
+" insert a new line from wherever you are, return to insert mode
+imap <c-o> <Esc>:pu_<CR>i
+imap <c-j> <Esc>ji
+imap <c-k> <Esc>ki
+
+" for surround.vim
+xmap s S
+
+" dragvisuals.vim commands
+set runtimepath^=~/.vim/plugin/dragvisuals.vim
+
+vmap  <expr>  H        DVB_Drag('left')
+vmap  <expr>  L        DVB_Drag('right')
+vmap  <expr>  J        DVB_Drag('down')
+vmap  <expr>  K        DVB_Drag('up')
+vmap  <expr>  D        DVB_Duplicate()
+" Remove any introduced trailing whitespace after moving...
+let g:DVB_TrimWS = 1
+
+" Align shortcut
+nmap <c-a> <Esc>:Align 
+vmap <c-a> <Esc>:Align 
+nmap j gj
+nmap k gk
+
+" include ctrlp runtime
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+" Vundle packages
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
+Bundle 'Align'
+Bundle 'endwise.vim'
+Bundle 'AutoClose'
+
+execute pathogen#infect()
+
+" \e within double quotes == escape character
+
+" macros for erb in ruby -- @r for ruby that is interpreted but not written, @w for that which is written
+let @r="^i<% \e$a %>\e"  
+let @w="^i<%= \e$a %>\e"
+" quick way to add rspec style tests
+let @i="^iit { should have_ }\ehi"
+let @n="^iit { should_not have_ }\ehi"
+
+"====[ Instantly Better Vim add-ons ] ======"
+    
+  " Highlight just the 81st column of wide lines...
+    highlight ColorColumn ctermbg=magenta
+    call matchadd('ColorColumn', '\%81v', 100)
+
+"====[ Make tabs, trailing whitespace, and non-breaking spaces visible ]======
+
+    exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
+    set list
+
+
+"====[ Swap : and ; to make colon commands easier to type ]======
+
+    nnoremap  ;  :
+    nnoremap  :  ;
+
