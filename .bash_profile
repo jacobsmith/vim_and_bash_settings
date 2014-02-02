@@ -14,6 +14,8 @@ export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig:/usr/local/lib/pkgco
 # Your previous /Users/jacobsmith/.bash_profile file was backed up as /Users/jacobsmith/.bash_profile.macports-saved_2013-01-27_at_23:14:06
 ##
 
+## Include my custom scripts
+PATH=$PATH:/Users/jacobsmith/bash_scripts
 
 ~/hacker_news_onion.sh
 
@@ -27,4 +29,7 @@ alias Ruby="cd ~/Ruby"
 
 alias be="bundle exec"
 alias runtests="clear; rspec spec"
+
+alias linguistics="cd ~/Documents/Spring2014/linguistics"
+export EDITOR="vim"
 set -o vi
